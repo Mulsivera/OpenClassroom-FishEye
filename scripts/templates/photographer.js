@@ -15,6 +15,7 @@ class Photographer {
     const portrait = document.createElement('img');
     portrait.setAttribute("src", `assets/photographers/photographers_id_photos/${this.portrait}`)
     portrait.setAttribute("class", "photographer__portrait");
+    portrait.setAttribute("alt", "Portrait du photographe " + this.name);
 
     const name = document.createElement('h2');
     name.setAttribute("class", "photographer__name")
