@@ -10,15 +10,33 @@ class Photographer {
 
     getUserCardDOM() {
     const article = document.createElement('article');
+    article.setAttribute("class", "photographer")
 
-    const img = document.createElement('img');
-    img.setAttribute("src", `assets/photographers/photographers_id_photos/${this.portrait}`)
+    const portrait = document.createElement('img');
+    portrait.setAttribute("src", `assets/photographers/photographers_id_photos/${this.portrait}`)
+    portrait.setAttribute("class", "photographer__portrait");
 
-    const h2 = document.createElement('h2');
-    h2.textContent = this.name;
+    const name = document.createElement('h2');
+    name.setAttribute("class", "photographer__name")
+    name.textContent = this.name;
 
-    article.appendChild(img);
-    article.appendChild(h2);
+    const localisation = document.createElement('p');
+    localisation.setAttribute("class", "photographer__localisation");
+    localisation.textContent = this.city + ", " + this.country;
+
+    const tagline = document.createElement('p');
+    tagline.setAttribute("class", "photographer__tagline");
+    tagline.textContent = this.tagline;
+
+    const price = document.createElement('p');
+    price.setAttribute("class", "photographer__price");
+    price.textContent = this.price +"€/jour";
+
+    article.appendChild(portrait);
+    article.appendChild(name);
+    article.appendChild(localisation);
+    article.appendChild(tagline);
+    article.appendChild(price);
 
     return article
 
