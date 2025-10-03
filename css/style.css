@@ -54,6 +54,11 @@ p {
     width: 200px;
 }
 
+.photographer_section a {
+    text-decoration: none;
+    text-align: center;
+}
+
 .photographer__portrait {
     border-radius: 50%;
     object-fit:cover;
