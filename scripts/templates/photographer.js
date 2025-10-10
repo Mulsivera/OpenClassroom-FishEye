@@ -6,6 +6,7 @@ class Photographer {
         this.city = data.city;
         this.tagline = data.tagline;
         this.price = data.price;
+        this.id = data.id;
     }
 
     getUserCardDOM() {
@@ -14,7 +15,7 @@ class Photographer {
 
     const link = document.createElement('a');
     link.setAttribute("class", "photographer__link");
-    link.setAttribute("href", "#");
+    link.setAttribute("href", `photographer.html?id=${this.id}`);
 
     const portrait = document.createElement('img');
     portrait.setAttribute("src", `assets/photographers/photographers_id_photos/${this.portrait}`)
@@ -44,9 +45,9 @@ class Photographer {
     article.appendChild(link);
     link.appendChild(portrait);
     link.appendChild(name);
-    link.appendChild(localisation);
-    link.appendChild(tagline);
-    link.appendChild(price);
+    article.appendChild(localisation);
+    article.appendChild(tagline);
+    article.appendChild(price);
 
     return article
 
