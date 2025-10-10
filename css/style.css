@@ -59,22 +59,22 @@ p {
     text-align: center;
 }
 
-.photographer__portrait {
+.photographer_section .photographer__portrait {
     border-radius: 50%;
     object-fit:cover;
 }
 
-.photographer__localisation {
+.photographer_section .photographer__localisation {
     color:#901C1C;
     font-size: 13px;
     font-weight: 500;
 }
 
-.photographer__tagline {
+.photographer_section .photographer__tagline {
     font-size: 10px;
 }
 
-.photographer__price {
+.photographer_section .photographer__price {
     font-size: 9px;
     color: #757575;
 }

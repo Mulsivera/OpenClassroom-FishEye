@@ -5,7 +5,7 @@
 .photograph-header {
     background-color: #FAFAFA;
     height: 300px;
-    margin: 0 100px;
+    margin: 35px 100px;
 }
 
 .contact_button {
@@ -73,4 +73,45 @@ form input {
     height: 68px;
     border: none;
     border-radius: 5px;
+}
+
+.photograph-header {
+    height: 313px;
+    padding: 35px;
+}
+
+.photograph-header article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.photograph-header article > * {
+    max-width: 200px;
+}
+
+.photograph-header .photograph__portrait {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.photograph-header .photograph__name {
+    font-size: 42px;
+    color: #D3573C;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.photograph-header .photograph__localisation {
+    font-size: 24px;
+    color: #901C1C;
+    margin-bottom: 10px;
+}
+
+.photograph-header .photograph__tagline {
+    font-size: 14px;
+    color: #525252;
 }
