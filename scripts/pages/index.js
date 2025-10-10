@@ -4,9 +4,8 @@ import { getPhotographerCardDOM } from "../templates/getPhotographerCardDOM.js";
 
 async function init() {
     const photographers = await getAllPhotographers();
-    displayAllElements(photographers, ".photographer_section", function() {
-        return getPhotographerCardDOM(this);
-    });
+
+    displayAllElements(photographers,".photographer_section",(photographer) => getPhotographerCardDOM(photographer));
 }
 
 init();

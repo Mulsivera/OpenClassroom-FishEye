@@ -6,5 +6,7 @@ export class Media {
         this.likes = data.likes;
         this.date = data.date;
         this.price = data.price;
+        this.image = data.image || null;
+        this.video = data.video || null;
     }
 }

@@ -1,16 +1,15 @@
-// Display Alls elements from a GET Data
+// Display all elements from a GET data
 
-export async function displayAllElements (element, parent, getter) {
+export async function displayAllElements(elements, parentSelector, getter) {
     try {
-        const parentElement = document.querySelector(parent);
-        if (!parentElement) throw new Error("scripts/data/displayData/displayAllElements.js => " + parent + " not found" );
+        const parentElement = document.querySelector(parentSelector);
+        if (!parentElement) throw new Error(`Parent not found: ${parentSelector}`);
 
-        element.forEach((e) => {
-            parentElement.appendChild(getter(e))
-
+        elements.forEach((el) => {
+            parentElement.appendChild(getter(el));
         });
 
-        } catch (error) {
-            console.error("scripts/data/displayData/displayAllElements.js => Error :", error);
-        }
+    } catch (error) {
+        console.error("displayAllElements.js => Error:", error);
+    }
 }
