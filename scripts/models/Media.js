@@ -1,4 +1,4 @@
-class Media {
+export class Media {
     constructor(data) {
         this.id = data.id;
         this.photographerId = data.photographerId;
@@ -7,16 +7,5 @@ class Media {
         this.likes = data.likes;
         this.date = data.date;
         this.price = data.price;
-    }
-
-    getMediaCardDom() {
-        const article = document.createElement('article');
-
-        const title = document.createElement('p');
-        title.textContent = this.title
-
-        article.appendChild(title);
-
-        return article
     }
 }

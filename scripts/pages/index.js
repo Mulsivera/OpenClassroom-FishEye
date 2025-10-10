@@ -1,23 +1,12 @@
-    async function getPhotographers() {
-        const response = await fetch("../data/photographers.json");
-        const data = await response.json();
+import { getAllPhotographers } from "../data/getData/getAllPhotographers.js";
+import { displayAllElements } from "../data/displayData/displayAllElements.js";
+import { getPhotographerCardDOM } from "../templates/getPhotographerCardDOM.js";
 
-        return data.photographers.map(data => new Photographer(data));
+async function init() {
+    const photographers = await getAllPhotographers();
+    displayAllElements(photographers, ".photographer_section", function() {
+        return getPhotographerCardDOM(this);
+    });
+}
 
-    }
-
-    async function displayData(photographers) {
-        const photographersSection = document.querySelector(".photographer_section");
-
-        photographers.forEach((photographer) => {
-            photographersSection.appendChild(photographer.getUserCardDOM());
-        });
-    }
-
-    async function init() {
-        const photographers = await getPhotographers();
-        displayData(photographers);
-    }
-    
-    init();
-    
+init();
