@@ -2,9 +2,10 @@ import { getPhotographer } from "../data/getData/getPhotographer.js";
 import { displayOneElement } from "../data/displayData/displayOneElement.js";
 import { getPhotographerHeaderDOM } from "../templates/getPhotographerHeaderDOM.js";
 import { getAllMediasFromPhotographer } from "../data/getData/getAllMediasFromPhotographer.js";
-import { displayAllElements } from "../data/displayData/displayAllElements.js";
-import { getMediaCardDom } from "../templates/getMediaCardDOM.js";
 import { mediaFactory } from "../factory/mediaFactory.js";
+import { getMediaCardDom } from "../templates/getMediaCardDOM.js";
+import { likeManagement } from "../utils/likeManagement.js";
+import { totalLikes } from "../utils/totalLikes.js";
 
 async function init() {
     const params = new URLSearchParams(window.location.search);
@@ -14,10 +15,17 @@ async function init() {
     const media = await getAllMediasFromPhotographer(id);
 
     const mediaInstances = media.map((m) => mediaFactory(m)).filter(Boolean);
-    console.log(mediaInstances);
+    mediaInstances.forEach((item) => {
+    if(Image || Video){
+        displayOneElement(".photograph-medias", () => getMediaCardDom(item, photographer.name))
+    } else {
+        console.log("Media type unknown" + item);
+    }
+    });
 
     displayOneElement(".photograph-header", () => getPhotographerHeaderDOM(photographer));
-    displayAllElements(media, ".photograph-medias", (m) => getMediaCardDom(m));
+    likeManagement();
+    totalLikes();
 }
 
 init();

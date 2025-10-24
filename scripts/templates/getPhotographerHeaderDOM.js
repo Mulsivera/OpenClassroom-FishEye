@@ -30,12 +30,18 @@ export function getPhotographerHeaderDOM(photographer) {
     portrait.setAttribute("class", "photograph__portrait");
     portrait.setAttribute("alt", "Portrait du photographe " + photographer.name);
 
+    const infoModalDiv = document.querySelector("#info_modal .info_modal");
+    const priceElement = document.createElement("p");
+    priceElement.id = "price";
+    priceElement.textContent = photographer.price + "€/jour";
+
     article.appendChild(information_div);
     information_div.appendChild(name);
     information_div.appendChild(localisation);
     information_div.appendChild(tagline);
     article.appendChild(contact_button);
     article.appendChild(portrait);
+    infoModalDiv.appendChild(priceElement);
 
     return article
 }

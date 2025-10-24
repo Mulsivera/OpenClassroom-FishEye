@@ -12,7 +12,7 @@ export function mediaFactory(media) {
         }
 
         throw new Error(
-            `/scripts/data/factory/mediaFactory => media type non reconnu : ${JSON.stringify(media)}`
+            `/scripts/data/factory/mediaFactory => media type not know : ${JSON.stringify(media)}`
         );
     } catch (error) {
         console.error("/scripts/data/factory/mediaFactory =>", error.message);

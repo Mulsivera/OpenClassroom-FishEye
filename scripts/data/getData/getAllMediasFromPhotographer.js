@@ -1,6 +1,4 @@
 // GET All medias form a specific photographer
-
-import { Media } from "../../models/Media.js";
         
 export async function getAllMediasFromPhotographer(photographerId) {
     try {
@@ -12,7 +10,7 @@ export async function getAllMediasFromPhotographer(photographerId) {
 
         const data = await response.json();
         const mediasData = data.media.filter(m => m.photographerId === photographerId);
-        return mediasData.map(data => new Media(data));
+        return mediasData;
     } catch (error) {
         console.error("script/data/getData/getAllMediasFromPhotographer.js => ", error);
         return null;

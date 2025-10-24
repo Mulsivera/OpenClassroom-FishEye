@@ -115,3 +115,70 @@ form input {
     font-size: 14px;
     color: #525252;
 }
+
+.photograph-medias {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 15px;
+    margin: 0 100px;
+    margin-bottom: 100px;
+}
+
+.photograph-medias .mediaImage .mediaImage-picture {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.photograph-medias .mediaImage .mediaImage-infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.photograph-medias .mediaImage .mediaImage-infos h2 {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #901C1C;
+    font-weight: 500;
+}
+
+.photograph-medias .mediaImage .mediaImage-infos span {
+    font-size: 16px;
+    color: #901C1C;
+    font-weight: 500;
+}
+
+.photograph-medias .mediaImage .mediaImage-infos i {
+    color: #901C1C;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+#info_modal {
+    position: fixed;
+    bottom: 0px;
+    right: 30px;
+}
+
+#info_modal .info_modal {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #DB8876;
+    border-radius: 5px 5px 0px 0px;
+    padding: 20px;
+    font-size: 20px;
+    width: 250px;
+}
+
+#info_modal .info_modal #likes_display span {
+    margin-right: 5px;
+    width: 45px;
+}
+
+#info_modal .info_modal #likes_display {
+    width: 70px;
+}
