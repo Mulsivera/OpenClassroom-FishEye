@@ -5,6 +5,8 @@ export async function displayAllElements(elements, parentSelector, getter) {
         const parentElement = document.querySelector(parentSelector);
         if (!parentElement) throw new Error(`Parent not found: ${parentSelector}`);
 
+        parentElement.innerHTML = '';
+
         elements.forEach((el) => {
             parentElement.appendChild(getter(el));
         });

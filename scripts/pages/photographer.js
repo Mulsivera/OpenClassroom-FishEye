@@ -6,6 +6,8 @@ import { mediaFactory } from "../factory/mediaFactory.js";
 import { getMediaCardDom } from "../templates/getMediaCardDOM.js";
 import { likeManagement } from "../utils/likeManagement.js";
 import { totalLikes } from "../utils/totalLikes.js";
+import { displayLightBox } from "../utils/displayLightBox.js";
+import { navigateLightBox } from "../utils/navigateLightBox.js";
 
 async function init() {
     const params = new URLSearchParams(window.location.search);
@@ -26,6 +28,8 @@ async function init() {
     displayOneElement(".photograph-header", () => getPhotographerHeaderDOM(photographer));
     likeManagement();
     totalLikes();
+    displayLightBox();
+    navigateLightBox();
 }
 
 init();

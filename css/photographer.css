@@ -182,3 +182,85 @@ form input {
 #info_modal .info_modal #likes_display {
     width: 70px;
 }
+
+.sort_div {
+    margin: 50px 100px;
+
+}
+
+.sort_div label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.sort_div select {
+    background-color: #901C1C;
+    color: white;
+    border: 0px;
+    padding: 10px;
+    outline: none;
+    border-radius: 2px;
+}
+
+.sort_div select option:hover {
+    background-color: #901C1C;
+}
+
+#display_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    padding: 20px 0;
+}
+
+#display_modal .content {
+    padding: 50px 150px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#display_modal .content .left {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 20px;
+    height: 40%;
+    font-size: 25px;
+    color: #901C1C;
+}
+
+#display_modal .content .right {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 20px;
+    height: 40%;
+    font-size: 25px;
+    color: #901C1C;
+}
+
+#display_modal .content .right p {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    color: #901C1C;
+}
+
+#display_modal .content #content {
+    height: 100%;
+}
+
+#display_modal .content #content .modal_media {
+    height: 80%;
+    max-width: 100%;
+}
+
+#display_modal .content #content {
+    font-size: 20px;
+    color: #901C1C;
+}
