@@ -1,7 +1,7 @@
-import { getOneElement } from "../data/getData/getOneElement.js";
+import { MediaData } from "../models/MediaData.js";
 
 export async function getMediaCardModal(div,media,index) {
-    const media_object = await getOneElement("media",(Number(media.id)));
+    const media_object = await MediaData.getOne(Number(media.id));
     div.innerHTML = "";
     if (media.tagName === "IMG") {
         const image_element = document.createElement('img');

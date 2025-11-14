@@ -1,0 +1,14 @@
+import { Datas } from "./Datas.js";
+
+export class MediaData extends Datas {
+    static async getOne(id) {
+        const data = await Datas.getData();
+        const mediaData = data.media.find(m => m.id === id);
+        return mediaData ? new Media(mediaData) : null;
+    }
+    static async getAllFromPhotographer(id) {
+        const data = await Datas.getData();
+        const mediasData = data.media.filter(m => m.photographerId === id);
+        return mediasData;
+    }
+}

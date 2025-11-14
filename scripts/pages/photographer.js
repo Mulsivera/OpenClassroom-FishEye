@@ -8,15 +8,15 @@ import { displayLightBox } from "../utils/displayLightBox.js";
 import { navigateLightBox } from "../utils/navigateLightBox.js";
 import { filterSelector } from "../utils/filterSelector.js";
 import { contactForm } from "../utils/contactForm.js";
-import { getOneElement } from "../data/getData/getOneElement.js";
-import { getAllElements } from "../data/getData/getAllElements.js";
+import { PhotographerData } from "../models/PhotographerData.js";
+import { MediaData } from "../models/MediaData.js";
 
 async function init() {
     const params = new URLSearchParams(window.location.search);
     const id = parseInt(params.get("id"), 10);
 
-    const photographer = await getOneElement("photographer", id);
-    const media = await getAllElements("media",id);
+    const photographer = await PhotographerData.getOne(id);
+    const media = await MediaData.getAllFromPhotographer(id);
 
     const mediaInstances = media.map((m) => mediaFactory(m)).filter(Boolean);
     mediaInstances.sort((a, b) => b.likes - a.likes);
