@@ -1,12 +1,9 @@
 import { Photographer } from "../../models/Photographer.js";
+import { getData } from "./getData.js";
 
 export async function getAllElements(element, elementId) {
     try {
-        const response = await fetch("../data/photographers.json");
-        if (!response.ok) {
-            throw new Error(`script/data/getData/getAllElements.js => HTTP Error : ${response.status}`);
-        }
-        const data = await response.json();
+        const data = await getData();
         if (element == "photographer") {
             return data.photographers.map(p => new Photographer(p));
         }

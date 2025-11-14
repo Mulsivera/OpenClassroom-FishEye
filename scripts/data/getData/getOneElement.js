@@ -1,13 +1,10 @@
 import { Media } from "../../models/Media.js";
 import { Photographer } from "../../models/Photographer.js";
+import { getData } from "./getData.js";
 
 export async function getOneElement(element, elementID) {
     try {
-        const response = await fetch("../data/photographers.json")
-        if (!response.ok) {
-            throw new Error(`script/data/getData/getOneElement.js => HTTP Error : ${response.status}`)
-        }
-        const data = await response.json();
+        const data = await getData();
         if (element == "photographer") {
             const photographerData = data.photographers.find(p => p.id === elementID);
             return photographerData ? new Photographer(photographerData) : null;
