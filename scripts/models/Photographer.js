@@ -1,3 +1,5 @@
+import { nameTransform } from "../utils/nameTransform.js";
+
 export class Photographer {
     constructor(data) {
         this.name = data.name;
@@ -7,5 +9,6 @@ export class Photographer {
         this.tagline = data.tagline;
         this.price = data.price;
         this.id = data.id;
+        this.nameTransform = nameTransform(data.name);
     }
 }

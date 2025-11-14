@@ -1,10 +1,6 @@
 // Create a image card
 
-import { nameTransform } from "../utils/nameTransform.js";
-
-export function getMediaCardDom(media, photographer_name) {
-
-    const photographer_name_text = nameTransform(photographer_name);
+export function getMediaCardDom(media, nameTransform) {
 
     const article = document.createElement("article");
     article.className = "mediaImage";
@@ -13,7 +9,7 @@ export function getMediaCardDom(media, photographer_name) {
     informations.className = "mediaImage-infos";
     if (media.image) {
         const picture = document.createElement("img");
-        picture.src = `./assets/photographers/${photographer_name_text}/${media.image}`;
+        picture.src = `./assets/photographers/${nameTransform}/${media.image}`;
         picture.className = "mediaImage-picture";
         picture.id = media.id
         article.append(picture);
@@ -21,7 +17,7 @@ export function getMediaCardDom(media, photographer_name) {
 
     if (media.video) {
         const video = document.createElement("video");
-        video.src = `./assets/photographers/${photographer_name_text}/${media.video}`;
+        video.src = `./assets/photographers/${nameTransform}/${media.video}`;
         video.className = "mediaImage-picture";
         video.id = media.id
         article.append(video);
