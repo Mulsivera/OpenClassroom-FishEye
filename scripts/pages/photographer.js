@@ -9,6 +9,7 @@ import { totalLikes } from "../utils/totalLikes.js";
 import { displayLightBox } from "../utils/displayLightBox.js";
 import { navigateLightBox } from "../utils/navigateLightBox.js";
 import { filterSelector } from "../utils/filterSelector.js";
+import { contactForm } from "../utils/contactForm.js";
 
 async function init() {
     const params = new URLSearchParams(window.location.search);
@@ -20,16 +21,17 @@ async function init() {
     const mediaInstances = media.map((m) => mediaFactory(m)).filter(Boolean);
     mediaInstances.sort((a, b) => b.likes - a.likes);
     mediaInstances.forEach((item) => {
-    if(Image || Video){
-        displayOneElement(".photograph-medias", () => getMediaCardDom(item, photographer.name))
-    } else {
-        console.log("Media type unknown" + item);
-    }
+        if (Image || Video) {
+            displayOneElement(".photograph-medias", () => getMediaCardDom(item, photographer.name))
+        } else {
+            console.log("Media type unknown" + item);
+        }
     });
 
     displayOneElement(".photograph-header", () => getPhotographerHeaderDOM(photographer));
     likeManagement();
     totalLikes();
+    contactForm();
     displayLightBox();
     navigateLightBox();
     filterSelector();

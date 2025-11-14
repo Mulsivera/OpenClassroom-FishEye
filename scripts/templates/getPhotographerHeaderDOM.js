@@ -22,7 +22,7 @@ export function getPhotographerHeaderDOM(photographer) {
 
     const contact_button = document.createElement('button');
     contact_button.setAttribute("class", "contact_button");
-    contact_button.setAttribute("onclick", "displayModal()");
+    contact_button.setAttribute("id", "open_contact_modal");
     contact_button.textContent = "Contactez-moi";
 
     const portrait = document.createElement('img');
