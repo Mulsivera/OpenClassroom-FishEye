@@ -20,6 +20,15 @@
         <div class="photograph-header">
         </div>
         <div class="sort_div">
+            <p class="sort_text">Triez par</p>
+            <div class="sort_element">
+                <p id="sort_selector_text" class="sort_selector_text">Popularité</p>
+                <div id="sort_selector" class="sort_selector">
+                    <p class="filter" id="popularity">Popularité</p>
+                    <p class="filter" id="date">Date</p>
+                    <p class="filter" id="title">Titre</p>
+                </div>
+            </div>
         </div>
         <div class="photograph-medias">
         </div>
@@ -46,12 +55,18 @@
     </div>
     <div id="display_modal">
         <div class="content">
-            <div class="left"><p><i class="fa-solid fa-chevron-left fa-2xl" id="navigation"></i></p></div>
+            <div class="left">
+                <p><i class="fa-solid fa-chevron-left fa-2xl" id="navigation"></i></p>
+            </div>
             <div id="content"></div>
-            <div class="right"><p><i class="fa-solid fa-xmark fa-2xl" id="close"></i><i class="fa-solid fa-chevron-right fa-2xl" id="navigation"></i></p></div>
+            <div class="right">
+                <p><i class="fa-solid fa-xmark fa-2xl" id="close"></i><i class="fa-solid fa-chevron-right fa-2xl"
+                        id="navigation"></i></p>
+            </div>
         </div>
     </div>
     <script type="module" src="/scripts/pages/photographer.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
 </body>
+
 </html>

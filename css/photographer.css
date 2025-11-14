@@ -264,3 +264,55 @@ form input {
     font-size: 20px;
     color: #901C1C;
 }
+
+.sort_div {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    height: 40px;
+}
+
+.sort_element {
+    height: 100%;
+    display: flex;
+}
+
+.sort_selector_text {
+    background-color: #901C1C;
+    color: white;
+    padding: 15px;
+    width: 120px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.sort_text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sort_selector {
+    background-color: #901C1C;
+    color: white;
+    padding: 0 5px;
+    width: 140px;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 5px;
+    display: none;
+    z-index: 999;
+}
+
+.sort_selector.show {
+    display: flex;
+}
+
+.sort_selector p {
+    padding: 10px;
+    height: 20px;
+}
+
+.sort_selector p:not(:last-child) {
+    border-bottom: 1px solid white;
+}

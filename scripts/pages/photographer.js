@@ -8,6 +8,7 @@ import { likeManagement } from "../utils/likeManagement.js";
 import { totalLikes } from "../utils/totalLikes.js";
 import { displayLightBox } from "../utils/displayLightBox.js";
 import { navigateLightBox } from "../utils/navigateLightBox.js";
+import { filterSelector } from "../utils/filterSelector.js";
 
 async function init() {
     const params = new URLSearchParams(window.location.search);
@@ -17,6 +18,7 @@ async function init() {
     const media = await getAllMediasFromPhotographer(id);
 
     const mediaInstances = media.map((m) => mediaFactory(m)).filter(Boolean);
+    mediaInstances.sort((a, b) => b.likes - a.likes);
     mediaInstances.forEach((item) => {
     if(Image || Video){
         displayOneElement(".photograph-medias", () => getMediaCardDom(item, photographer.name))
@@ -30,6 +32,7 @@ async function init() {
     totalLikes();
     displayLightBox();
     navigateLightBox();
+    filterSelector();
 }
 
 init();

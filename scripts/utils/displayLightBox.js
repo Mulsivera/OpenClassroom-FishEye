@@ -23,8 +23,3 @@ export function displayLightBox() {
             content.innerHTML = "";
     })
 }
-
-
-//        console.log("id de l'image cliquée : " + image.id);
-//        console.log("index de l'image cliquée : " + index);
-//        console.log("liste des ids des medias de la page" + imageIds);
