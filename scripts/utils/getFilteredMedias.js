@@ -1,8 +1,8 @@
 import { mediaFactory } from "../factory/mediaFactory.js";
 import { displayOneElement } from "../data/displayData/displayOneElement.js";
 import { getMediaCardDom } from "../templates/getMediaCardDOM.js";
-import { PhotographerData } from "../models/PhotographerData.js";
-import { MediaData } from "../models/MediaData.js";
+import { PhotographerData } from "../data/getData/PhotographerData.js";
+import { MediaData } from "../data/getData/MediaData.js";
 
 export async function getFilteredMedias(filterId) {
     const params = new URLSearchParams(window.location.search);

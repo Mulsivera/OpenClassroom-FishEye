@@ -7,17 +7,17 @@ export function getPhotographerHeaderDOM(photographer) {
 
     const name = document.createElement('h1');
     name.setAttribute("class", "photograph__name")
-    name.setAttribute("aria-label", "Nom du photographe : " + photographer.name);
+    name.setAttribute("aria-label", "Nom du photographe : ");
     name.textContent = photographer.name;
 
     const localisation = document.createElement('p');
     localisation.setAttribute("class", "photograph__localisation");
-    localisation.setAttribute("aria-label", "localisé à " + photographer.city + ", " + photographer.country);
+    localisation.setAttribute("aria-label", "localisé à");
     localisation.textContent = photographer.city + ", " + photographer.country;
 
     const tagline = document.createElement('p');
     tagline.setAttribute("class", "photograph__tagline");
-    tagline.setAttribute("aria-label", "Slogan : " + photographer.tagline);
+    tagline.setAttribute("aria-label", "Slogan :");
     tagline.textContent = photographer.tagline;
 
     const contact_button = document.createElement('button');

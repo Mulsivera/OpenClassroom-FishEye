@@ -12,6 +12,7 @@ export function getMediaCardDom(media, nameTransform) {
         picture.src = `./assets/photographers/${nameTransform}/${media.image}`;
         picture.className = "mediaImage-picture";
         picture.id = media.id
+        picture.alt = media.title
         article.append(picture);
     }
 
@@ -20,6 +21,7 @@ export function getMediaCardDom(media, nameTransform) {
         video.src = `./assets/photographers/${nameTransform}/${media.video}`;
         video.className = "mediaImage-picture";
         video.id = media.id
+        video.alt = media.title
         article.append(video);
     }
 
@@ -31,10 +33,12 @@ export function getMediaCardDom(media, nameTransform) {
 
     const likesCount = document.createElement("span");
     likesCount.className = "likes-count";
+    likesCount.setAttribute("aria-label", "Nombre de likes");
     likesCount.textContent = media.likes;
 
     const heartIcon = document.createElement("i");
     heartIcon.className = "fa-regular fa-heart heart-icon";
+    heartIcon.setAttribute("aria-label", "Icon de like")
 
     likesContainer.append(likesCount, heartIcon);
     informations.append(title, likesContainer);

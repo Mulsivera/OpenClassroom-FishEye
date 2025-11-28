@@ -1,4 +1,4 @@
-import { MediaData } from "../models/MediaData.js";
+import { MediaData } from "../data/getData/MediaData.js";
 
 export async function getMediaCardModal(div,media,index) {
     const media_object = await MediaData.getOne(Number(media.id));

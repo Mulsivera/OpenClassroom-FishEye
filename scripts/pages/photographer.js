@@ -8,8 +8,8 @@ import { displayLightBox } from "../utils/displayLightBox.js";
 import { navigateLightBox } from "../utils/navigateLightBox.js";
 import { filterSelector } from "../utils/filterSelector.js";
 import { contactForm } from "../utils/contactForm.js";
-import { PhotographerData } from "../models/PhotographerData.js";
-import { MediaData } from "../models/MediaData.js";
+import { PhotographerData } from "../data/getData/PhotographerData.js";
+import { MediaData } from "../data/getData/MediaData.js";
 
 async function init() {
     const params = new URLSearchParams(window.location.search);

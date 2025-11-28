@@ -1,4 +1,5 @@
 import { Datas } from "./Datas.js";
+import { Media } from "../../models/Media.js";
 
 export class MediaData extends Datas {
     static async getOne(id) {

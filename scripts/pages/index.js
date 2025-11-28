@@ -1,6 +1,6 @@
 import { displayAllElements } from "../data/displayData/displayAllElements.js";
 import { getPhotographerCardDOM } from "../templates/getPhotographerCardDOM.js";
-import { PhotographerData } from "../models/PhotographerData.js";
+import { PhotographerData } from "../data/getData/PhotographerData.js";
 
 async function init() {
     const photographers = await PhotographerData.getAll();
