@@ -1,32 +1,34 @@
+// This function creates a DOM element for a photographer's header with their name, location, tagline, portrait, contact button, and price.
+
 export function getPhotographerHeaderDOM(photographer) {
 
-    const article = document.createElement('article');
+    const article = document.createElement("article");
 
-    const information_div = document.createElement('div');
+    const information_div = document.createElement("div");
     information_div.setAttribute("class", "photographer__informations");
 
-    const name = document.createElement('h1');
-    name.setAttribute("class", "photograph__name")
+    const name = document.createElement("h1");
+    name.setAttribute("class", "photograph__name");
     name.setAttribute("aria-label", "Nom du photographe : ");
     name.textContent = photographer.name;
 
-    const localisation = document.createElement('p');
+    const localisation = document.createElement("p");
     localisation.setAttribute("class", "photograph__localisation");
     localisation.setAttribute("aria-label", "localisé à");
     localisation.textContent = photographer.city + ", " + photographer.country;
 
-    const tagline = document.createElement('p');
+    const tagline = document.createElement("p");
     tagline.setAttribute("class", "photograph__tagline");
     tagline.setAttribute("aria-label", "Slogan :");
     tagline.textContent = photographer.tagline;
 
-    const contact_button = document.createElement('button');
+    const contact_button = document.createElement("button");
     contact_button.setAttribute("class", "contact_button");
     contact_button.setAttribute("id", "open_contact_modal");
     contact_button.textContent = "Contactez-moi";
 
-    const portrait = document.createElement('img');
-    portrait.setAttribute("src", `assets/photographers/photographers_id_photos/${photographer.portrait}`)
+    const portrait = document.createElement("img");
+    portrait.setAttribute("src", `assets/photographers/photographers_id_photos/${photographer.portrait}`);
     portrait.setAttribute("class", "photograph__portrait");
     portrait.setAttribute("alt", "Portrait du photographe " + photographer.name);
 
@@ -43,5 +45,5 @@ export function getPhotographerHeaderDOM(photographer) {
     article.appendChild(portrait);
     infoModalDiv.appendChild(priceElement);
 
-    return article
+    return article;
 }

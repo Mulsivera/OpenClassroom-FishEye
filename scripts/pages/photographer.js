@@ -1,3 +1,5 @@
+// This script loads a photographer and their media, displays them on the page, and sets up interactions like likes, lightbox, filtering, and contact form.
+
 import { displayOneElement } from "../data/displayData/displayOneElement.js";
 import { getPhotographerHeaderDOM } from "../templates/getPhotographerHeaderDOM.js";
 import { mediaFactory } from "../factory/mediaFactory.js";
@@ -10,6 +12,7 @@ import { filterSelector } from "../utils/filterSelector.js";
 import { contactForm } from "../utils/contactForm.js";
 import { PhotographerData } from "../data/getData/PhotographerData.js";
 import { MediaData } from "../data/getData/MediaData.js";
+import { Video } from "../models/Video.js";
 
 async function init() {
     const params = new URLSearchParams(window.location.search);
@@ -22,7 +25,7 @@ async function init() {
     mediaInstances.sort((a, b) => b.likes - a.likes);
     mediaInstances.forEach((item) => {
         if (Image || Video) {
-            displayOneElement(".photograph-medias", () => getMediaCardDom(item, photographer.nameTransform))
+            displayOneElement(".photograph-medias", () => getMediaCardDom(item, photographer.nameTransform));
         } else {
             console.log("Media type unknown" + item);
         }

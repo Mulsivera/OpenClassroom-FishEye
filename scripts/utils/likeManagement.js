@@ -1,3 +1,5 @@
+// This function handles like/unlike actions on media items and updates the total likes count.
+
 import { totalLikes } from "./totalLikes.js";
 
 export function likeManagement() {

@@ -1,3 +1,5 @@
+// This class fetches photographer data and can return one photographer or all photographers.
+
 import { Datas } from "./Datas.js";
 import { Photographer } from "../../models/Photographer.js";
 

@@ -1,3 +1,5 @@
+// This class represents a photographer with properties like name, portrait, location, tagline, price, and a transformed name.
+
 import { nameTransform } from "../utils/nameTransform.js";
 
 export class Photographer {

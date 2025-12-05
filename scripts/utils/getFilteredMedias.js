@@ -1,3 +1,5 @@
+// This function filters a photographer's media by popularity, date, or title and displays the sorted media on the page.
+
 import { mediaFactory } from "../factory/mediaFactory.js";
 import { displayOneElement } from "../data/displayData/displayOneElement.js";
 import { getMediaCardDom } from "../templates/getMediaCardDOM.js";

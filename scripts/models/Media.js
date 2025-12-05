@@ -1,3 +1,5 @@
+// This class represents a media item with common properties like id, title, likes, date, price, and type (image or video).
+
 export class Media {
     constructor(data) {
         this.id = data.id;

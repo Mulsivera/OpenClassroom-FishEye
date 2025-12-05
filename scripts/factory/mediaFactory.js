@@ -1,3 +1,5 @@
+// This function creates a media object as either an Image or a Video, based on the data.
+
 import { Image } from "../models/Image.js";
 import { Video } from "../models/Video.js";
 
@@ -10,10 +12,6 @@ export function mediaFactory(media) {
         if (media.video) {
             return new Video(media);
         }
-
-        throw new Error(
-            `/scripts/data/factory/mediaFactory => media type not know : ${JSON.stringify(media)}`
-        );
     } catch (error) {
         console.error("/scripts/data/factory/mediaFactory =>", error.message);
         return null;

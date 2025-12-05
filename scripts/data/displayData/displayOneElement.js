@@ -1,6 +1,6 @@
-// Display One element from a GET Data
+// This function displays a single element inside a specified container on the page.
 
- export async function displayOneElement (parent, getData) {
+export async function displayOneElement (parent, getData) {
     try {
         const parentElement = document.querySelector(parent);
         if (!parentElement) throw new Error("scripts/data/displayData/displayOneElement.js => " + parent + " not found" );
@@ -10,6 +10,3 @@
         console.error("scripts/data/displayData/displayOneElement.js => Error :", error);
     }
 }
-
-
-

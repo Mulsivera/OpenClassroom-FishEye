@@ -1,4 +1,4 @@
-// Create a image card
+// This function creates a DOM element for a media card (image or video) with title and likes.
 
 export function getMediaCardDom(media, nameTransform) {
 
@@ -11,8 +11,8 @@ export function getMediaCardDom(media, nameTransform) {
         const picture = document.createElement("img");
         picture.src = `./assets/photographers/${nameTransform}/${media.image}`;
         picture.className = "mediaImage-picture";
-        picture.id = media.id
-        picture.alt = media.title
+        picture.id = media.id;
+        picture.alt = media.title;
         article.append(picture);
     }
 
@@ -20,8 +20,8 @@ export function getMediaCardDom(media, nameTransform) {
         const video = document.createElement("video");
         video.src = `./assets/photographers/${nameTransform}/${media.video}`;
         video.className = "mediaImage-picture";
-        video.id = media.id
-        video.alt = media.title
+        video.id = media.id;
+        video.alt = media.title;
         article.append(video);
     }
 
@@ -38,7 +38,7 @@ export function getMediaCardDom(media, nameTransform) {
 
     const heartIcon = document.createElement("i");
     heartIcon.className = "fa-regular fa-heart heart-icon";
-    heartIcon.setAttribute("aria-label", "Icon de like")
+    heartIcon.setAttribute("aria-label", "Icon de like");
 
     likesContainer.append(likesCount, heartIcon);
     informations.append(title, likesContainer);

@@ -1,3 +1,5 @@
+// This function sets up a lightbox to display media items in a modal when clicked, and handles closing the modal.
+
 import { getMediaCardModal } from "../templates/getMediaCardModal.js";
 
 export function displayLightBox() {
@@ -17,9 +19,9 @@ export function displayLightBox() {
     });
 
     close_button.addEventListener("click", () => {
-            modal.style.display = "none";
-            document.body.style.position = "relative";
-            var imageIds = [];
-            content.innerHTML = "";
-    })
+        modal.style.display = "none";
+        document.body.style.position = "relative";
+        var imageIds = [];
+        content.innerHTML = "";
+    });
 }

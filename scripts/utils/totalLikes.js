@@ -1,3 +1,5 @@
+// This function calculates the total likes from all media items and updates the total likes display.
+
 export function totalLikes() {
     const allMedias = document.getElementsByClassName("likes-count");
     let totalLikes = 0;
@@ -11,11 +13,11 @@ export function totalLikes() {
 
     total_like_display.innerHTML = "";
 
-    const likes = document.createElement('span');
+    const likes = document.createElement("span");
     likes.textContent = totalLikes;
 
-    const heart_icon = document.createElement('i');
-    heart_icon.className = 'fa-solid fa-heart';
+    const heart_icon = document.createElement("i");
+    heart_icon.className = "fa-solid fa-heart";
 
     total_like_display.appendChild(likes);
     total_like_display.appendChild(heart_icon);

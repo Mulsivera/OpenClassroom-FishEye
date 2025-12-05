@@ -1,3 +1,5 @@
+// This class fetches media data and can return one item or all items for a photographer.
+
 import { Datas } from "./Datas.js";
 import { Media } from "../../models/Media.js";
 

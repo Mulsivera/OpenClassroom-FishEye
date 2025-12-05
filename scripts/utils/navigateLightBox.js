@@ -1,10 +1,12 @@
+// This function allows navigation between media items in the lightbox using left and right buttons.
+
 import { getMediaCardModal } from "../templates/getMediaCardModal.js";
 
 export function navigateLightBox() {
 
     const images = document.querySelectorAll(".mediaImage .mediaImage-picture");
     var imageIds = Array.from(images).map(img => parseInt(img.id, 10));
-    const navigation_button = document.querySelectorAll("#navigation");
+    const navigation_button = document.querySelectorAll("#navigation_left, #navigation_right");
     const content = document.querySelector("#display_modal .content #content");
 
     navigation_button.forEach((button) => {

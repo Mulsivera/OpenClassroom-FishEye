@@ -1,11 +1,11 @@
-// Display all elements from a GET data
+// This function displays all given elements inside a specified container on the page.
 
 export async function displayAllElements(elements, parentSelector, getter) {
     try {
         const parentElement = document.querySelector(parentSelector);
         if (!parentElement) throw new Error(`Parent not found: ${parentSelector}`);
 
-        parentElement.innerHTML = '';
+        parentElement.innerHTML = "";
 
         elements.forEach((el) => {
             parentElement.appendChild(getter(el));
